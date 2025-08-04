@@ -1,0 +1,125 @@
+{
+  "widget": {
+    "type": "latest",
+    "sizeX": 5,
+    "sizeY": 3.5,
+    "config": {
+      "datasources": [
+        {
+          "type": "entity",
+          "entityAliasId": "7b3b54de-d57c-3ee8-1d07-9b5acb0bf4c2",
+          "dataKeys": [],
+          "alarmFilterConfig": {
+            "statusList": [
+              "ACTIVE"
+            ]
+          }
+        }
+      ],
+      "timewindow": {
+        "displayValue": "",
+        "selectedTab": 0,
+        "realtime": {
+          "realtimeType": 1,
+          "interval": 1000,
+          "timewindowMs": 60000,
+          "quickInterval": "CURRENT_DAY",
+          "hideInterval": false,
+          "hideLastInterval": false,
+          "hideQuickInterval": false
+        },
+        "history": {
+          "historyType": 0,
+          "interval": 1000,
+          "timewindowMs": 60000,
+          "fixedTimewindow": {
+            "startTimeMs": 1682928998568,
+            "endTimeMs": 1683015398568
+          },
+          "quickInterval": "CURRENT_DAY",
+          "hideInterval": false,
+          "hideLastInterval": false,
+          "hideFixedInterval": false,
+          "hideQuickInterval": false
+        },
+        "aggregation": {
+          "type": "AVG",
+          "limit": 2500
+        }
+      },
+      "showTitle": false,
+      "backgroundColor": "#fff",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "padding": "",
+      "settings": {
+        "useMarkdownTextFunction": true,
+        "markdownTextPattern": "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
+        "markdownTextFunction": "\nvar dashboardPage = $('.tb-dashboard-page')[0];\n\n\n\nreturn '<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"start stretch\" fxLayoutGap=\"8px\">' +\n        '<div fxLayout=\"column\" fxLayoutAlign=\"center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n        '<div fxFlex fxLayout=\"column\" fxLayoutAlign=\"center\">' +\n           '<div class=\"title\"></div>' +\n           '<div class=\"subtitle\" style=\"text-align: center; display: flex; justify-content: center; align-items: center; height: 100px;\">${entityName}</div>' +\n        '</div>' +\n       \n'</div>';\n",
+        "applyDefaultMarkdownStyle": false,
+        "markdownCss": ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color:orange;\n}\n\n.header .subtitle {\n    color:orange;\n    font-weight: bold;\n    font-size: 30px;\n    \n}\n\n#go-back{\n    transition: 0.5s ease;\n}\n\n\n#go-back:hover {\n  background-color: orange;\n}"
+      },
+      "title": "New Markdown/HTML Card",
+      "showTitleIcon": false,
+      "iconColor": "rgba(0, 0, 0, 0.87)",
+      "iconSize": "24px",
+      "titleTooltip": "",
+      "dropShadow": false,
+      "enableFullscreen": false,
+      "widgetStyle": {},
+      "titleStyle": {
+        "fontSize": "16px",
+        "fontWeight": 400
+      },
+      "showLegend": false,
+      "widgetCss": "",
+      "noDataDisplayMessage": "",
+      "actions": {
+        "elementClick": [
+          {
+            "name": "go-back",
+            "icon": "more_horiz",
+            "useShowWidgetActionFunction": null,
+            "showWidgetActionFunction": "return true;",
+            "type": "custom",
+            "customFunction": "widgetContext.stateController.navigatePrevState(0);",
+            "openInSeparateDialog": false,
+            "openInPopover": false,
+            "id": "fd666ec9-cd5a-af01-47e1-b7e53911f87a"
+          }
+        ]
+      },
+      "enableDataExport": false,
+      "pageSize": 1024,
+      "useDashboardTimewindow": true,
+      "displayTimewindow": true,
+      "margin": "0",
+      "borderRadius": ""
+    },
+    "row": 0,
+    "col": 0,
+    "id": "a208cf51-3e9a-a94d-ae51-b121f07182c8",
+    "typeFullFqn": "system.cards.markdown_card"
+  },
+  "aliasesInfo": {
+    "datasourceAliases": {
+      "0": {
+        "alias": "entity from Dashboard",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null
+        }
+      }
+    },
+    "targetDeviceAlias": null
+  },
+  "filtersInfo": {
+    "datasourceFilters": {}
+  },
+  "originalSize": {
+    "sizeX": 24,
+    "sizeY": 4
+  },
+  "originalColumns": 24
+}

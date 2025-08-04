@@ -1,0 +1,104 @@
+{
+  "widget": {
+    "type": "latest",
+    "sizeX": 5,
+    "sizeY": 3.5,
+    "config": {
+      "datasources": [
+        {
+          "type": "entity",
+          "name": null,
+          "entityAliasId": "7adac6b1-53b0-6201-4969-8ef50a29c150",
+          "filterId": null,
+          "dataKeys": [],
+          "alarmFilterConfig": {
+            "statusList": [
+              "ACTIVE"
+            ]
+          }
+        }
+      ],
+      "timewindow": {
+        "displayValue": "",
+        "selectedTab": 0,
+        "realtime": {
+          "realtimeType": 1,
+          "interval": 1000,
+          "timewindowMs": 60000,
+          "quickInterval": "CURRENT_DAY"
+        },
+        "history": {
+          "historyType": 0,
+          "interval": 1000,
+          "timewindowMs": 60000,
+          "fixedTimewindow": {
+            "startTimeMs": 1678196817439,
+            "endTimeMs": 1678283217439
+          },
+          "quickInterval": "CURRENT_DAY"
+        },
+        "aggregation": {
+          "type": "AVG",
+          "limit": 25000
+        }
+      },
+      "showTitle": false,
+      "backgroundColor": "#fff",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "padding": "4px",
+      "settings": {
+        "useMarkdownTextFunction": false,
+        "markdownTextPattern": "<div class=\"market-layout\" style=\"width: 100%; height: 100%; padding: 0;\" fxLayout=\"column\">\n    <h5 class=\"market-title\">${entityName}</h5>\n    <tb-dashboard-state style=\"width: 100%; height: 90px;\" [ctx]=\"ctx\" stateId=\"alarm_badges\"></tb-dashboard-state>\n    <tb-dashboard-state fxFlex=\"80\" [ctx]=\"ctx\" [syncParentStateParams]=\"true\" stateId=\"plan\"></tb-dashboard-state>\n    \n\n    \n</div>",
+        "markdownTextFunction": "return '# Some title\\\\n - Entity name: ' + data[0]['entityName'];",
+        "applyDefaultMarkdownStyle": true,
+        "markdownCss": ".tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n\n.tb-markdown-view div, .tb-markdown-view p {\n    line-height: normal;\n}\n\n.market-layout {\n    position: relative;\n}\n\n.market-title {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    z-index: 2;\n}"
+      },
+      "title": "New Markdown/HTML Card",
+      "showTitleIcon": false,
+      "iconColor": "rgba(0, 0, 0, 0.87)",
+      "iconSize": "24px",
+      "titleTooltip": "",
+      "dropShadow": true,
+      "enableFullscreen": false,
+      "widgetStyle": {},
+      "titleStyle": {
+        "fontSize": "16px",
+        "fontWeight": 400
+      },
+      "showLegend": false,
+      "enableDataExport": false,
+      "widgetCss": ".tb-widget-container .tb-widget .tb-multiple-input {\n    background-color: #FAFAFA;\n    border-radius: 4px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle {\n    margin-top: 15px !important;\n    margin-bottom: 0 !important;\n    padding-right: 30px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-form-field > label .mat-icon {\n    margin-left: 0;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-form-field .label-wrapper {\n    font-weight: bold;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch {\n    width: 42px;\n    margin-left: 8px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__track {\n    border-radius: 16px;\n    height: 24px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__handle-track {\n    width: calc(100% - 24px);\n    left: 2px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__handle {\n    border-radius: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__ripple {\n    width: 40px;\n    height: 40px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__icons {\n    display: none;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after {\n    background: #fafafa;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after {\n    background: #fafafa;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__track::after {\n    background: #F2994A;\n}\n\n.tb-widget-container .tb-widget .leaflet-control-zoom {\n    display: none;\n}\n",
+      "noDataDisplayMessage": "",
+      "pageSize": 1024,
+      "useDashboardTimewindow": true,
+      "displayTimewindow": true,
+      "borderRadius": "8px"
+    },
+    "row": 0,
+    "col": 0,
+    "id": "48550d77-5dc0-a7d2-1f03-5a203a57bc44",
+    "typeFullFqn": "system.cards.markdown_card"
+  },
+  "aliasesInfo": {
+    "datasourceAliases": {
+      "0": {
+        "alias": "Selected device",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": "selectedDevice",
+          "defaultStateEntity": null
+        }
+      }
+    },
+    "targetDeviceAlias": null
+  },
+  "filtersInfo": {
+    "datasourceFilters": {}
+  },
+  "originalSize": {
+    "sizeX": 13,
+    "sizeY": 11
+  },
+  "originalColumns": 24
+}
